@@ -1,1 +1,5 @@
 TODO: Task 1 - Write the mongo import command here
+mongoimport --uri "mongodb://mongo:5L50gyZacaOUdw4CHINe@containers-us-west-50.railway.app:6797/?authSource=admin" 
+            --db=csf_assessment 
+            --collection=restaurants 
+            --jsonArray "C:\Users\Jeremy\Desktop\VTTP\NUS Class\assessment\csf\csf-assessment-template\restaurants.json"

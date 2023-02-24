@@ -1,5 +1,7 @@
 package vttp2022.csf.assessment.server.models;
 
+import org.bson.Document;
+
 // Do not modify this class
 public class LatLng {
 	private float latitude;
@@ -17,5 +19,12 @@ public class LatLng {
 	}
 	public float getLongitude() {
 		return this.longitude;
+	}
+
+	public static LatLng create(Document doc) {
+		LatLng ll = new LatLng();
+		ll.setLatitude(doc.getLong("address.coord.0"));
+		ll.setLongitude(doc.getLong("address.coord.1"));
+		return ll;
 	}
 }
