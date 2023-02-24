@@ -32,7 +32,7 @@ public class RestaurantContoller {
     @ResponseBody
     public ResponseEntity<String> getCuisines()  {
         System.out.println("getCuisine");
-        LinkedHashSet<String> resArr = restaurantSvc.getCuisines(20, 0);
+        LinkedHashSet<String> resArr = restaurantSvc.getCuisines(3772, 0);
         List<String> test =resArr.stream().toList();
         JsonArrayBuilder arrBuilder = Json.createArrayBuilder();
         test.stream()
