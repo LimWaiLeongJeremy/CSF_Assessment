@@ -1,6 +1,11 @@
 <div>
     <h1>List of Cuisine!</h1>
-    <div *ngFor="let r of restaurants">
-        <p>{{ r }}</p>
+    <div *ngFor="let c of cuisines" >
+        <ul>
+            <li>
+            <a [routerLink]="[ '/cuisine', c]">{{ c }}</a>
+            </li>
+        </ul>
+        
     </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 import { Restaurant } from '../models';
 import { RestaurantService } from '../restaurant-service';
 
@@ -9,22 +10,17 @@ import { RestaurantService } from '../restaurant-service';
 })
 export class CuisineListComponent implements OnInit{
 
-  restaurants: Restaurant[] = []
+  cuisines :any[] = [];
   constructor(private svc: RestaurantService) { }
 
   ngOnInit(): void {
-      this.getRestaurants()
-  }
-
-  getRestaurants() {
-    console.log('Getting restaurants!');
+    console.log('Getting cuisines!');
     this.svc.getRestaurants()
                       .subscribe(data => {
-                          this.restaurants = data;
+                          this.cuisines = data;
                           console.log(data)
+                          
+  })
   
-    })
   }
-
-
 }

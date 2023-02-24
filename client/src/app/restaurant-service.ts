@@ -17,17 +17,17 @@ export class RestaurantService {
 	// }
 
     getRestaurants(): Observable<Restaurant[]> {
-        return this.http.get<Restaurant[]>(`/api/restaurants`)
+        return this.http.get<any[]>(`/api/restaurants`)
     }
 
 	// TODO Task 3 
 	// Use the following method to get a list of restaurants by cuisine
 	// You can add any parameters (if any) and the return type 
 	// DO NOT CHNAGE THE METHOD'S NAME
-	// public getRestaurantsByCuisine(???) {
-	// 	// Implememntation in here
+	public getRestaurantsByCuisine(cuisine: string) {
+		return this.http.get<Restaurant[]>(`api/${cuisine}/restaurants`)
 
-	// }
+	}
 	
 	// TODO Task 4
 	// Use this method to find a specific restaurant

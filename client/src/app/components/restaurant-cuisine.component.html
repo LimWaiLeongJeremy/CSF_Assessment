@@ -1,1 +1,9 @@
-<p>restaurant-cuisine works!</p>
+<div>
+    <h1>List of Restaurants!</h1>
+    <div *ngFor="let r of restaurants" >
+    <ul>
+        <li>
+        <a [routerLink]="[  ]">{{ r.name }}</a>
+        </li>
+    </ul>
+</div>

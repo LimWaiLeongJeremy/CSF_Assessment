@@ -11,12 +11,9 @@ import { RestaurantDetailsComponent } from './components/restaurant-details.comp
 import { RestaurantService } from './restaurant-service';
 
 const appRoutes: Routes = [
-  {
-    path: '', component: CuisineListComponent
-  },
-  {
-    path: '**', redirectTo: '/', pathMatch: 'full' 
-  }
+  { path: 'cuisine', component: CuisineListComponent },
+  { path: 'cuisine/:cuisine', component: RestaurantCuisineComponent },
+  { path: '**', redirectTo: '/', pathMatch: 'full' }
 ]
 
 @NgModule({
