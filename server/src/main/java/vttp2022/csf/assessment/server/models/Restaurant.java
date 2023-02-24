@@ -70,7 +70,7 @@ public class Restaurant {
 						+ ","
 						+ doc.getString("address.borough");
 		restaurant.setAddress(address);
-		String coord
+
 		// restaurant.setCoordinates(LatLng.create(doc));
 		// restaurant.sefkinglagtMapURL(doc.getString(restaurant));
 		
